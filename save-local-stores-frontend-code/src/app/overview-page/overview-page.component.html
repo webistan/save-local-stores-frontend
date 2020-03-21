@@ -1,7 +1,5 @@
-<ul>
-  <li *ngFor="let offer of offers">
-    <span> {{ offer.businessName }} </span>
-    <span> {{ offer.businessCategory }} </span>
-    <span> {{ offer.pictureURLs[0] }} </span>
-  </li>
-</ul>
+<a *ngFor="let offer of offers" routerLink="/detail/{{ offer.id }}">
+  <span> {{ offer.businessName }} </span>
+  <span> {{ offer.businessCategory }} </span>
+  <span> {{ offer.pictureURLs[0] }} </span>
+</a>

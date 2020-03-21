@@ -6,5 +6,6 @@ export interface Offer {
   ownerPictureURL: string
   description: string
   pictureURLs: string[]
+  quote: string
   cityID: string
 }

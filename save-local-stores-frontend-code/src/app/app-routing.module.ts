@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'overview/:id', component: OverviewPageComponent },
   { path: 'terms', component: AgbPageComponent },
   { path: 'overview', component: OverviewPageComponent },
-  { path: 'order', component: VoucherOrderPageComponent }
+  { path: 'order/:id', component: VoucherOrderPageComponent }
 ];
 
 @NgModule({

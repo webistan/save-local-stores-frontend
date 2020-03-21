@@ -1,1 +1,110 @@
-/* You can add global styles to this file, and also import other style files */
+/*------------------------------------*\
+  GLOBAL
+\*------------------------------------*/
+
+html,
+body {
+    margin                   : 0;
+    padding                  : 0;
+    cursor                   : inherit;
+    cursor                   : initial;
+    cursor                   : unset;
+
+    -ms-text-size-adjust     : 100%;
+    /* 2 */
+    -webkit-text-size-adjust : 100%;
+    /* 2 */
+
+    display         : block;
+    background-size : cover;
+    word-break      : break-word;
+    word-wrap       : break-word;
+
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*------------------------------------*\
+  BOOTSTRAP ADJUSTMENTS
+\*------------------------------------*/
+
+.container {
+    position : relative;
+    z-index  : 1;
+    width    : 100%;
+}
+
+.row {margin-top: 5vh;}
+
+/*------------------------------------*\
+  Colors
+\*------------------------------------*/
+
+.covid-green {color: #0ac693;}
+.covid-blue {color: #0c5061;}
+.covid-red {color: #f74440;}
+.covid-grey {color: #d6e0e4;}
+
+/*------------------------------------*\
+  TEXT
+\*------------------------------------*/
+
+/* Überschriften */
+h1, h2 {font-weight: 600;}
+
+h1 {
+	font-size: 96px;
+	line-height: 140px;
+}
+
+h2 {
+	font-size: 48px;
+	line-height: 60px;
+}
+
+h3 {
+	font-size: 24px;
+	line-height: 38px;
+	font-weight: 300;
+}
+
+.font-weight-bold h3 {font-weight: 600;}
+
+p, a {
+    font-size   : 14px;
+    line-height : 28px;
+    font-weight : 300;
+    color: #000000;
+}
+
+/* Links */
+a {
+    color           : black;
+    text-decoration : none;
+}
+
+a:hover {
+    color: #00cb91;
+    text-decoration : none;
+    transition      : 0.5s;
+}
+
+.buy-button {
+  display          : inline-block;
+  padding          : 24px 24px;
+  cursor           : pointer;
+  background-color : #fff;
+  font-size        : 24px;
+  font-weight      : 700;
+  color            : #00cb91;
+  letter-spacing   : 0.5px;
+  letter-spacing   : 0.5px;
+  text-decoration  : none;
+  border           : solid #00cb91 2px;
+  transition       : 0.5s;
+}
+
+.buy-button:hover {
+  background-color : #00cb91;
+  color            : #fff;
+  transition       : 0.5s;
+}

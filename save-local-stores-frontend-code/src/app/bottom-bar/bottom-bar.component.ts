@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bottom-bar.component.css']
 })
 export class BottomBarComponent implements OnInit {
-
   constructor() { }
 
   ngOnInit(): void {

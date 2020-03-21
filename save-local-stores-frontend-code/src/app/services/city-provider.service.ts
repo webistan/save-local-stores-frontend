@@ -16,16 +16,16 @@ export class CityProviderService {
   }
 
   cities(): Observable<City[]> {
-    let configUrl = '78.47.161.61';
-    let token = '1236F#fR@jaqUX5v$lCFTaMD7ub$P0i52GVSW#xwaRhUZR$UDiU2cL#ABAByC2j3BdIgW9TLksqvZPQs1Xk9uNkcEL@oLbBot&'
-    return of(CITIES)
-    return this.http.get(configUrl, { headers: {'x-access-token': token} }).pipe(
+    let configUrl = '78.47.161.61/cities';
+    return this.http.get(configUrl).pipe(
       catchError(this.handleError),
       map(function (data: Object): City[] {
-        let result = data['message']
-        return [
-          { id: '56bc4f17-b290-4e71-960e-747531c0c8fe', name: 'Berlin', pictureURL: 'https://via.placeholder.com/150' }
-        ]
+        let results = data['results']
+        var entries: City[] = []
+        results.forEach(entry => {
+          entries.push({ id: entry['id'], name: entry['name'], pictureURL: entry['picture'] })
+        });
+        return entries
       })
     )
   }

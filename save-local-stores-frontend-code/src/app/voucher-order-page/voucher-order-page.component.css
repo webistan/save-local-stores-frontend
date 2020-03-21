@@ -1,0 +1,24 @@
+#input-form {
+	max-width: 200px;
+	border-bottom: 3px solid #0ac693;
+}
+
+.form-control {
+	border: 0;
+	max-width: 80px;
+	font-weight: 600;
+	color: #000000;
+}
+
+.payment {
+    font-size   : 14px;
+    font-weight : 300;
+}
+
+input::placeholder {
+	color: #000000 !important;
+}
+
+input:disabled {
+	background-color: white;
+}

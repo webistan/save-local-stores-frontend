@@ -1,1 +1,43 @@
-<p>voucher-order-page works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-md-4" id="sidebar-detail">
+        </div>
+        <div class="col-12 col-md-7 ml-auto">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="covid-green">{{ offer.businessName }}</h2>
+                    <h2 class="font-weight-bold">freut sich auf deine Unterstützung!</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="POST">
+                        <div class="form-group row form-inline">
+                            <div class="col-sm-6 text-right">
+                                <h3 class="font-weight-bold">Dein Wunschbetrag:</h3>
+                            </div>
+                            <div class="col-sm-6" id="input-form">
+                                <input type="number" class="form-control" min="5" max="599">
+                                <span class="font-weight-bold">€</span>
+                            </div>
+                        </div>
+                        <div class="form-group row form-inline">
+                            <div class="col-sm-6 text-right">
+                                <h3 class="font-weight-bold">Total:</h3>
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="number" class="form-control" id="result" placeholder="{{ amount() }}" disabled>
+                                <span class="font-weight-bold">€</span>
+                                <span class="payment ml-2">inklusive 3% Payment Gebühren</span>
+                            </div>
+                        </div>
+                        <div class="form-group mt-5">
+                            <button class="buy-button">Verbindlich zu Paypal weiterleiten</button>
+                        </div>						
+                    </form>
+                    <p>Der Gutschein wird nach Bezahlung via Paypal an die Mail gesendet.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

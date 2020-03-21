@@ -9,6 +9,13 @@ import { DetailViewPageComponent } from './detail-view-page/detail-view-page.com
 import { VoucherOrderPageComponent } from './voucher-order-page/voucher-order-page.component';
 import { VoucherConfirmationPageComponent } from './voucher-confirmation-page/voucher-confirmation-page.component';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
+import { ImpressumPageComponent } from './impressum-page/impressum-page.component';
+import { FaqPageComponent} from './faq-page/faq-page.component';
+import { DataPrivacyPageComponent} from './data-privacy-page/data-privacy-page.component';
+import { AgbPageComponent} from './agb-page/agb-page.component';
+
+
+
 
 @NgModule({
   declarations: [
@@ -18,7 +25,12 @@ import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
     DetailViewPageComponent,
     VoucherOrderPageComponent,
     VoucherConfirmationPageComponent,
-    BottomBarComponent
+    BottomBarComponent,
+    ImpressumPageComponent,
+    FaqPageComponent,
+    DataPrivacyPageComponent,
+    AgbPageComponent
+
   ],
   imports: [
     BrowserModule,

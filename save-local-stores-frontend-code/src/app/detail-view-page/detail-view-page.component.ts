@@ -20,9 +20,8 @@ export class DetailViewPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    let cityID = this.route.snapshot.paramMap.get(CITY_ROUTE_DESCRIPTOR);
-    let offerID = this.route.snapshot.paramMap.get(OFFER_ROUTE_DESCRIPTOR);
-    this.offerProvider.offer(cityID, offerID)
+    let offerID = this.route.snapshot.paramMap.get('id');
+    this.offerProvider.offer(offerID)
       .subscribe(offer => this.offer = offer);
   }
 }

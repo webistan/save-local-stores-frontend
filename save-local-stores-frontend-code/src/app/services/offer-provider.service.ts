@@ -11,14 +11,18 @@ import { OFFERS } from '../model/mock-offers';
 export class OfferProviderService {
   constructor() {}
 
+  allOffers(): Observable<Offer[]> {
+    return of(OFFERS)
+  }
+
   offers(cityID: string): Observable<Offer[]> {
-    return of(OFFERS).pipe(
+    return this.allOffers().pipe(
       map(offers => offers.filter(offer => offer.cityID == cityID))
     )
   }
 
-  offer(cityID: string, offerID: string): Observable<Offer> {
-    return this.offers(cityID).pipe(
+  offer(offerID: string): Observable<Offer> {
+    return this.allOffers().pipe(
       map(offers => offers.find(offer => offer.id == offerID)),
       filter(offer => offer != undefined)
     )

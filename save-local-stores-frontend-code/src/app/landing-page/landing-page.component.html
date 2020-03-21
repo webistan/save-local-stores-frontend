@@ -1,4 +1,10 @@
+<div id="title">#KeinLadenschluss</div>
+<div id="subtitle">f&uuml;r deinen Lieblingsladen</div>
+<div id="subtitle">Supporte mit <b>{{ appTitle }}</b> deinen Lieblingsstore und verschenke goldene Momente an deine Liebsten.</div>
+
 <a *ngFor="let city of cities" routerLink="/overview/{{ city.id }}">
-  <span> {{ city.name }} </span>
-  <span> {{ city.numberOfOffers }} </span>
+  <div class="city">
+    <img class="city" src="{{ city.pictureURL }}" />
+    <span> {{ city.name }} </span>
+  </div>
 </a>

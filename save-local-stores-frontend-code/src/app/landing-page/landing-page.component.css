@@ -42,6 +42,16 @@
     margin: 0 16px;
   }
 
+  .city {
+    height: 200;
+    width: 200;
+  }
+
+  .city img {
+    height: 180;
+    width: 180;
+  }
+
   .toolbar #left-spacer-box {
     height: 40px;
     width: 40px;

@@ -24,7 +24,7 @@ export class CityProviderService {
       map(function (data: Object): City[] {
         let result = data['message']
         return [
-          { id: '56bc4f17-b290-4e71-960e-747531c0c8fe', name: 'Berlin', numberOfOffers: 87 }
+          { id: '56bc4f17-b290-4e71-960e-747531c0c8fe', name: 'Berlin', pictureURL: 'https://via.placeholder.com/150' }
         ]
       })
     )

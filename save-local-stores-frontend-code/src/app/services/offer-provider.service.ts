@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable, of } from 'rxjs';
+
 import { Offer } from '../model/offer';
 import { OFFERS } from '../model/mock-offers';
 
@@ -6,9 +8,10 @@ import { OFFERS } from '../model/mock-offers';
   providedIn: 'root'
 })
 export class OfferProviderService {
-  offers: Offer[]
+  offers(): Observable<Offer[]> {
+    return of(OFFERS)
+  }
 
   constructor() {
-    this.offers = OFFERS
   }
 }

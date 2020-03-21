@@ -14,6 +14,6 @@ export class OverviewPageComponent implements OnInit {
   constructor(private offerProvider: OfferProviderService) { }
 
   ngOnInit(): void {
-    this.offers = this.offerProvider.offers
+    this.offerProvider.offers().subscribe(offers => this.offers = offers);
   }
 }

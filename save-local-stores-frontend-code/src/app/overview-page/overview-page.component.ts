@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute} from '@angular/router';
 
 import { Offer } from '../model/offer';
 import { OfferProviderService } from '../services/offer-provider.service'
@@ -12,10 +13,15 @@ import { OfferProviderService } from '../services/offer-provider.service'
 export class OverviewPageComponent implements OnInit {
   offers: Offer[]
 
-  constructor(private offerProvider: OfferProviderService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private offerProvider: OfferProviderService
+  ) {
+  }
 
   ngOnInit(): void {
-    this.offerProvider.offers()
+    let cityID = this.route.snapshot.paramMap.get('id');
+    this.offerProvider.offers(cityID)
       .subscribe(offers => this.offers = offers);
   }
 }

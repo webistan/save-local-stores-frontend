@@ -6,6 +6,7 @@ import { DetailViewPageComponent } from './detail-view-page/detail-view-page.com
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ImpressumPageComponent } from './impressum-page/impressum-page.component'
 import { LandingPageComponent } from './landing-page/landing-page.component'
+import { CITY_ROUTE_DESCRIPTOR } from './model/route-descriptors';
 import { OverviewPageComponent } from './overview-page/overview-page.component'
 
 
@@ -13,10 +14,10 @@ const routes: Routes = [
   { path: '', component: LandingPageComponent },
   { path: 'data-privacy', component: DataPrivacyPageComponent },
   { path: 'detail/:id', component: DetailViewPageComponent },
-  { path: 'detail/:id', component: DetailViewPageComponent },
   { path: 'faq', component: FaqPageComponent },
-  { path: 'terms', component: AgbPageComponent },
   { path: 'impressum', component: ImpressumPageComponent },
+  { path: 'overview/:id', component: OverviewPageComponent },
+  { path: 'terms', component: AgbPageComponent },
   { path: 'overview', component: OverviewPageComponent },
 ];
 

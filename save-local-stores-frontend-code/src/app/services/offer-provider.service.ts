@@ -9,17 +9,18 @@ import { OFFERS } from '../model/mock-offers';
   providedIn: 'root'
 })
 export class OfferProviderService {
-  offers(): Observable<Offer[]> {
-    return of(OFFERS)
-  }
+  constructor() {}
 
-  offer(id: string): Observable<Offer> {
-    return this.offers().pipe(
-      map(offers => offers.find(offer => offer.id == id)),
-      filter(offer => offer != undefined)
+  offers(cityID: string): Observable<Offer[]> {
+    return of(OFFERS).pipe(
+      map(offers => offers.filter(offer => offer.cityID == cityID))
     )
   }
 
-  constructor() {
+  offer(cityID: string, offerID: string): Observable<Offer> {
+    return this.offers(cityID).pipe(
+      map(offers => offers.find(offer => offer.id == offerID)),
+      filter(offer => offer != undefined)
+    )
   }
 }

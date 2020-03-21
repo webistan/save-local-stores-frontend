@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Offer } from '../model/offer';
 
 @Component({
   selector: 'app-detail-view-page',
@@ -6,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-view-page.component.css']
 })
 export class DetailViewPageComponent implements OnInit {
+  offer: Offer
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
-
 }

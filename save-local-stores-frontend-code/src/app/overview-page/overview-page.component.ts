@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Offer } from './offer';
-import { OFFERS } from './mock-offers';
+import { OfferProviderService } from '../services/offer-provider.service'
+import { Offer } from '../model/offer';
 
 @Component({
   selector: 'app-overview-page',
@@ -11,9 +11,9 @@ import { OFFERS } from './mock-offers';
 export class OverviewPageComponent implements OnInit {
   offers: Offer[]
 
-  constructor() { }
+  constructor(private offerProvider: OfferProviderService) { }
 
   ngOnInit(): void {
-    this.offers = OFFERS
+    this.offers = this.offerProvider.offers
   }
 }

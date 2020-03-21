@@ -1,5 +1,7 @@
+import { NgModule, Injectable } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpInterceptor, HTTP_INTERCEPTORS, HttpHandler, HttpEvent, HttpRequest } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,8 +16,15 @@ import { FaqPageComponent} from './faq-page/faq-page.component';
 import { DataPrivacyPageComponent} from './data-privacy-page/data-privacy-page.component';
 import { AgbPageComponent} from './agb-page/agb-page.component';
 
-
-
+@Injectable()
+export class AppHttpInterceptor implements HttpInterceptor {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    request = request.clone({
+      url: 'http://' + request.url.split('http://localhost:4200/')[0]
+    });
+    return next.handle(request);
+  }
+}
 
 @NgModule({
   declarations: [
@@ -30,13 +39,15 @@ import { AgbPageComponent} from './agb-page/agb-page.component';
     FaqPageComponent,
     DataPrivacyPageComponent,
     AgbPageComponent
-
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AppHttpInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

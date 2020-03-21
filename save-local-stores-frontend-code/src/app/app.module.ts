@@ -15,6 +15,7 @@ import { ImpressumPageComponent } from './impressum-page/impressum-page.componen
 import { FaqPageComponent} from './faq-page/faq-page.component';
 import { DataPrivacyPageComponent} from './data-privacy-page/data-privacy-page.component';
 import { AgbPageComponent} from './agb-page/agb-page.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
 
 @Injectable()
 export class AppHttpInterceptor implements HttpInterceptor {
@@ -38,7 +39,8 @@ export class AppHttpInterceptor implements HttpInterceptor {
     ImpressumPageComponent,
     FaqPageComponent,
     DataPrivacyPageComponent,
-    AgbPageComponent
+    AgbPageComponent,
+    TopBarComponent
   ],
   imports: [
     BrowserModule,

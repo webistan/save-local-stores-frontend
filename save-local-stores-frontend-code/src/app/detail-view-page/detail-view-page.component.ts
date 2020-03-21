@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 
 import { Offer } from '../model/offer';
-import { CITY_ROUTE_DESCRIPTOR, OFFER_ROUTE_DESCRIPTOR } from '../model/route-descriptors';
 import { OfferProviderService } from '../services/offer-provider.service'
 
 @Component({

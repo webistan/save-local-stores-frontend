@@ -6,8 +6,8 @@ import { DetailViewPageComponent } from './detail-view-page/detail-view-page.com
 import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ImpressumPageComponent } from './impressum-page/impressum-page.component'
 import { LandingPageComponent } from './landing-page/landing-page.component'
-import { CITY_ROUTE_DESCRIPTOR } from './model/route-descriptors';
 import { OverviewPageComponent } from './overview-page/overview-page.component'
+import { VoucherOrderPageComponent } from './voucher-order-page/voucher-order-page.component';
 
 
 const routes: Routes = [
@@ -19,6 +19,7 @@ const routes: Routes = [
   { path: 'overview/:id', component: OverviewPageComponent },
   { path: 'terms', component: AgbPageComponent },
   { path: 'overview', component: OverviewPageComponent },
+  { path: 'order', component: VoucherOrderPageComponent },
 ];
 
 @NgModule({

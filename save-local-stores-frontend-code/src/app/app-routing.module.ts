@@ -7,11 +7,12 @@ import { FaqPageComponent } from './faq-page/faq-page.component';
 import { ImpressumPageComponent } from './impressum-page/impressum-page.component'
 import { LandingPageComponent } from './landing-page/landing-page.component'
 import { OverviewPageComponent } from './overview-page/overview-page.component'
+import { VoucherConfirmationPageComponent } from './voucher-confirmation-page/voucher-confirmation-page.component';
 import { VoucherOrderPageComponent } from './voucher-order-page/voucher-order-page.component';
-
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
+  { path: 'confirmation', component: VoucherConfirmationPageComponent },
   { path: 'data-privacy', component: DataPrivacyPageComponent },
   { path: 'detail/:id', component: DetailViewPageComponent },
   { path: 'faq', component: FaqPageComponent },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: 'overview/:id', component: OverviewPageComponent },
   { path: 'terms', component: AgbPageComponent },
   { path: 'overview', component: OverviewPageComponent },
-  { path: 'order', component: VoucherOrderPageComponent },
+  { path: 'order', component: VoucherOrderPageComponent }
 ];
 
 @NgModule({

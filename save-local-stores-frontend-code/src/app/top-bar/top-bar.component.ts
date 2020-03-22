@@ -8,11 +8,11 @@ import { APP_NAME } from '../model/global';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
-  appTitle: string
+  appName: string
   isMenuVisible: boolean
 
   constructor() {
-    this.appTitle = APP_NAME
+    this.appName = APP_NAME
   }
 
   ngOnInit(): void {

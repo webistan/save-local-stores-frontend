@@ -8,10 +8,10 @@ import { APP_NAME } from '../model/global';
   styleUrls: ['./voucher-confirmation-page.component.css']
 })
 export class VoucherConfirmationPageComponent implements OnInit {
-  appTitle: string
+  appName: string
 
   constructor() {
-    this.appTitle = APP_NAME
+    this.appName = APP_NAME
   }
 
   ngOnInit(): void {

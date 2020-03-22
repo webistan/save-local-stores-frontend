@@ -10,13 +10,13 @@ import { CityProviderService } from '../services/city-provider.service';
   styleUrls: ['./landing-page.component.css']
 })
 export class LandingPageComponent implements OnInit {
-  appTitle: string
+  appName: string
   cities: City[]
 
   constructor(
     private cityProvider: CityProviderService
   ) {
-    this.appTitle = APP_NAME
+    this.appName = APP_NAME
   }
 
   ngOnInit(): void {

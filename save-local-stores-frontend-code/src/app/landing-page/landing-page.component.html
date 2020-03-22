@@ -1,13 +1,18 @@
+<div class="center-box-80 text-center">
+  <h1>#KeinLadenschluss</h1>
+  <h2 class="covid-green">f&uuml;r deinen Lieblingsladen.</h2>
+  <div id="subtitle">Supporte mit einem <b>{{ appName }}</b>-Gutschein deinen Lieblingsstore und verschenke goldene Momente an deine Liebsten.</div>
+</div>
 
-  <div class="center-box-80 text-center">
-    <h1>#KeinLadenschluss</h1>
-    <h2 class="covid-green">f&uuml;r deinen Lieblingsladen.</h2>
-    <div id="subtitle">Supporte mit einem <b>{{ appName }}</b>-Gutschein deinen Lieblingsstore und verschenke goldene Momente an deine Liebsten.</div>
+<section class="gallery-block grid-gallery">
+  <div class="container">
+    <div class="row">
+      <a class="lightbox" *ngFor="let city of cities" routerLink="/overview/{{ city.id }}">
+        <div class="col-md-6 col-lg-4 item city">
+          <img class="img-fluid image scale-on-hover city" src="{{ city.pictureURL }}" />
+          <h3 class="mt-3 font-weight-bold">{{ city.name }}</h3>
+        </div>
+      </a>
+    </div>
   </div>
-
-<a *ngFor="let city of cities" routerLink="/overview/{{ city.id }}">
-  <div class="city">
-    <img class="city" src="{{ city.pictureURL }}" />
-    <span> {{ city.name }} </span>
-  </div>
-</a>
+</section>

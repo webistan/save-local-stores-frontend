@@ -24,7 +24,7 @@ export class CityProviderService {
         let results = data['results']
         var entries: City[] = []
         results.forEach(entry => {
-          entries.push({ id: entry['id'], name: entry['name'], pictureURL: entry['picture'] })
+          entries.push({ id: entry['id'], name: entry['name'], pictureURL: 'https://images.unsplash.com/photo-1568652699190-ba5f79983c8b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60' })//entry['picture'] })
         });
         return entries
       })

@@ -22,6 +22,6 @@ export class OverviewPageComponent implements OnInit {
   ngOnInit(): void {
     let cityID = this.route.snapshot.paramMap.get('id');
     this.offerProvider.offers(cityID)
-      .subscribe(offers => this.offers = offers.concat(offers));
+      .subscribe(offers => this.offers = offers);
   }
 }

@@ -1,5 +1,5 @@
 export const APP_NAME = 'kiezmarie'
-export const APP_NAME_UPPERCASE = 'Kiezmarie'
+export const CAPITALIZED_APP_NAME = 'Kiezmarie'
 export const BUSINESS_NAME = 'Kiezmarie GbR'
 export const DOMAIN_NAME = 'kiezmarie.com'
 export const EMAIL_ADDRESS = 'nina(at)' + DOMAIN_NAME

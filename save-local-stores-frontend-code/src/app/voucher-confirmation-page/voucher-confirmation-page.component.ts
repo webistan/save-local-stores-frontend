@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import { APP_NAME } from '../model/global';
+import { CAPITALIZED_APP_NAME } from '../model/global';
 
 @Component({
   selector: 'app-voucher-confirmation-page',
@@ -8,10 +8,10 @@ import { APP_NAME } from '../model/global';
   styleUrls: ['./voucher-confirmation-page.component.css']
 })
 export class VoucherConfirmationPageComponent implements OnInit {
-  appName: string
+  capitalizedAppName: string
 
   constructor() {
-    this.appName = APP_NAME
+    this.capitalizedAppName = CAPITALIZED_APP_NAME
   }
 
   ngOnInit(): void {

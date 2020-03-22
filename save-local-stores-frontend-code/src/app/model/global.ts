@@ -1,4 +1,5 @@
 export const APP_NAME = 'kiezmarie'
+export const APP_NAME_UPPERCASE = 'Kiezmarie'
 export const BUSINESS_NAME = 'Kiezmarie GbR'
 export const DOMAIN_NAME = 'kiezmarie.com'
 export const WWW_DOMAIN_NAME = 'www.' + DOMAIN_NAME

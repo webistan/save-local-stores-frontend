@@ -3,9 +3,20 @@
     left: 25%;
     top: 0;
     width: 50%;
-    height: 100%
+    height: 100%;
+    text-align: left;
 }
 
 #center-box h1 {
     margin: 40px 0;
+}
+
+.text-with-margin {
+    width: 100%;
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.possibly-not-needed {
+    color: red;
 }

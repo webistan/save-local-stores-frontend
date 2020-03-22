@@ -12,8 +12,6 @@ import { VoucherOrderPageComponent } from './voucher-order-page/voucher-order-pa
 import { VoucherConfirmationPageComponent } from './voucher-confirmation-page/voucher-confirmation-page.component';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
 import { ImpressumPageComponent } from './impressum-page/impressum-page.component';
-import { FaqPageComponent} from './faq-page/faq-page.component';
-import { DataPrivacyPageComponent} from './data-privacy-page/data-privacy-page.component';
 import { AgbPageComponent} from './agb-page/agb-page.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { RevocationPageComponent } from './revocation-page/revocation-page.component';
@@ -39,8 +37,6 @@ export class AppHttpInterceptor implements HttpInterceptor {
     VoucherConfirmationPageComponent,
     BottomBarComponent,
     ImpressumPageComponent,
-    FaqPageComponent,
-    DataPrivacyPageComponent,
     AgbPageComponent,
     TopBarComponent,
     RevocationPageComponent,

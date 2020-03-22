@@ -16,6 +16,7 @@ import { AgbPageComponent} from './agb-page/agb-page.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { RevocationPageComponent } from './revocation-page/revocation-page.component';
 import { BusinessPageComponent } from './business-page/business-page.component';
+import { AboutUsPageComponent } from './about-us-page/about-us-page.component';
 
 @Injectable()
 export class AppHttpInterceptor implements HttpInterceptor {
@@ -40,7 +41,8 @@ export class AppHttpInterceptor implements HttpInterceptor {
     AgbPageComponent,
     TopBarComponent,
     RevocationPageComponent,
-    BusinessPageComponent
+    BusinessPageComponent,
+    AboutUsPageComponent
   ],
   imports: [
     BrowserModule,

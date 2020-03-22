@@ -43,7 +43,7 @@
   left: 0;
   width: 348px;
   height: 100%;
-  z-index: 99999;
+  z-index: 999999;
   background-color: white;
   box-shadow: 5px 0px 5px rgb(240, 240, 240);
 }

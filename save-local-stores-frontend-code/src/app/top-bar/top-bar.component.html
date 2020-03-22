@@ -1,10 +1,16 @@
 <div id="top-bar">
-  <div (click)="showMenu()">x</div>
+  <div id="menu-icon" (click)="showMenu()">
+    <img src="../../assets/menu.svg"  alt="menu" width="64px" />
+  </div>
   <span id="title">{{ appName }}</span>
 </div>
 <div id="sidebar-menu" [style.visibility]="isMenuVisible ? 'visible' : 'hidden'">
-  <div (click)="hideMenu()">x</div>
-  <a routerLink="#" routerLinkActive="active">Städte</a>
-  <a routerLink="#" routerLinkActive="active">Für Unternehmen</a>
-  <a routerLink="#" routerLinkActive="active">Über Uns</a>
+  <div id="vertical-center-box-50">
+    <a routerLink="/" routerLinkActive="active" (click)="hideMenu()">Städte</a>
+    <a routerLink="#" routerLinkActive="active" (click)="hideMenu()">Für Unternehmen</a>
+    <a routerLink="#" routerLinkActive="active" (click)="hideMenu()">Über uns</a>
+  </div>
+  <div id="menu-icon" (click)="hideMenu()">
+    <img  src="../../assets/x.svg"  alt="x" width="64px" />
+  </div>
 </div>

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendIPSubpath: '78.47.161.61'
+  backendIPSubpath: '78.47.161.61:8484'
 };
 
 /*

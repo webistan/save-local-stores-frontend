@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
 
 function offerFromEntry(entry: Object): Offer {
   return {
-    businessCategory: entry['business_categorie_id'],
+    businessCategory: entry['business_categorie_name'],
     description: entry['description'],
     id: entry['id'],
     businessName: entry['name'],

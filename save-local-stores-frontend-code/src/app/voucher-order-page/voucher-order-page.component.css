@@ -11,7 +11,7 @@
 }
 
 .payment {
-    font-size   : 14px;
+    font-size   : 50%;
     font-weight : 300;
 }
 
@@ -21,4 +21,8 @@ input::placeholder {
 
 input:disabled {
 	background-color: white;
+}
+
+.center-box-50 h1 {
+  margin: 40px 0;
 }

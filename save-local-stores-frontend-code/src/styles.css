@@ -21,6 +21,7 @@ body {
     word-wrap       : break-word;
 
     font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
 }
 
 /*------------------------------------*\
@@ -49,20 +50,20 @@ body {
 \*------------------------------------*/
 
 /* Überschriften */
-h1, h2 {font-weight: 600;}
+h1, h2 {font-weight: 700;}
 
 h1 {
-	font-size: 96px;
+	font-size: 400%;
 	line-height: 140px;
 }
 
 h2 {
-	font-size: 48px;
+	font-size: 200%;
 	line-height: 60px;
 }
 
 h3 {
-	font-size: 24px;
+	font-size: 100%;
 	line-height: 38px;
 	font-weight: 300;
 }
@@ -70,7 +71,7 @@ h3 {
 .font-weight-bold h3 {font-weight: 600;}
 
 p, a {
-    font-size   : 14px;
+    font-size   : 100%;
     line-height : 28px;
     font-weight : 300;
     color: #000000;
@@ -78,7 +79,7 @@ p, a {
 
 /* Content */
 
-#center-box {
+.center-box-50 {
   position: relative;
   left: 25%;
   top: 0;
@@ -87,20 +88,25 @@ p, a {
   text-align: left;
 }
 
-#center-box h1 {
-  margin: 40px 0;
+.center-box-80 {
+  position: relative;
+  left: 10%;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  text-align: left;
 }
 
 /* Links */
 a {
-    color           : black;
-    text-decoration : none;
+    color           : black !important;
+    text-decoration : none !important;
 }
 
 a:hover {
-    color: #00cb91;
+    color: #00cb91 !important;
     text-decoration : none;
-    transition      : 0.5s;
+    transition      : 0.3s;
 }
 
 .buy-button {
@@ -108,7 +114,7 @@ a:hover {
   padding          : 24px 24px;
   cursor           : pointer;
   background-color : #fff;
-  font-size        : 24px;
+  font-size        : 100%;
   font-weight      : 700;
   color            : #00cb91;
   letter-spacing   : 0.5px;

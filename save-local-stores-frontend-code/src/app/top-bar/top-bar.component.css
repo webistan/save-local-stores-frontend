@@ -1,47 +1,53 @@
 /* Place the navbar at the bottom of the page, and make it stick */
 #top-bar {
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 80px;
-    margin: 0;
-    padding: 0;
-    box-shadow: 0px 5px 5px #D6e0e4;
-    background-color: white;
-    text-align: right;
-  }
-  
-  /* Style the links inside the navigation bar */
-  #bottom-bar #title {
-    float: right;
-    display: block;
-    font-size: 17px;
-    font-weight: bolder;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  
-  /* Change the color of links on hover */
-  #bottom-bar a:hover {
-    color: #0ac693;
-  }
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: 144px;
+  margin: 0;
+  padding: 0;
+  box-shadow: 0px 5px 5px rgb(240, 240, 240);
+  background-color: white;
+  text-align: right;
+}
 
-  #sidebar-menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 25%;
-    height: 100%;
-    z-index: 99999;
-    background-color: white;
-    box-shadow: 5px 0px 5px #D6e0e4;
-  }
-  
-  /* Add a green background color to the active link */
-  #bottom-bar a.active {
-    background-color: #0ac693;
-    color: black;
-  }
-  
+#menu-icon {
+  position: absolute;
+  left: 50px;
+  top: 40px;
+  width: 64px;
+  height: 64px;
+}
+
+#sidebar-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 348px;
+  height: 100%;
+  z-index: 99999;
+  background-color: white;
+  box-shadow: 5px 0px 5px rgb(240, 240, 240);
+}
+
+/* Add a green background color to the active link */
+#bottom-bar a.active {
+  background-color: #0ac693;
+  color: black;
+}
+
+#vertical-center-box-50 {
+  position: absolute;
+  top: calc(50% - 200px);
+  left: 0;
+  width: 100%;
+  height: 200px;
+  text-align: center;
+}
+
+#vertical-center-box-50 a {
+  width: 100%;
+  font-weight: 700;
+  display: inline-block;
+  margin: 15px 0;
+}

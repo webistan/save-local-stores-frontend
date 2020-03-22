@@ -5,7 +5,7 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  box-shadow: 0px -5px 5px #D6e0e4;
+  box-shadow: 0px -5px 5px rgb(240, 240, 240);
   background-color: white;
 }
 
@@ -17,7 +17,7 @@
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 100%;
 }
 
 /* Change the color of links on hover */

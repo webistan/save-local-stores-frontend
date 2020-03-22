@@ -13,7 +13,6 @@ brew doctor
 # Install node.js:
 brew install node
 
-
 # Check that you have npm properly installed (comes with node):
 npm -v
 
@@ -27,4 +26,7 @@ cd save-local-stores-frontend-code
 ng serve --open
 
 # Go to http://localhost:4200/
+
+# Build for deployment (look in dist directory for build artifacts):
+ng build
 ```

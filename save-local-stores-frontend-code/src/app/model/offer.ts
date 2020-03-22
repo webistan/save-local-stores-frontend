@@ -9,4 +9,5 @@ export interface Offer {
   streetAndNumber: string
   zipCodeAndCity: string
   quote: string
+  cityID: string
 }

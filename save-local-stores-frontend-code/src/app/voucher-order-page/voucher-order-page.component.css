@@ -1,3 +1,10 @@
+#representative-img {
+	position: absolute;
+	top: 200px;
+	left: 0;
+	width: 40%;
+}
+
 #input-form {
 	max-width: 200px;
 	border-bottom: 3px solid #0ac693;
@@ -11,7 +18,7 @@
 }
 
 .payment {
-    font-size   : 50%;
+    font-size   : 80%;
     font-weight : 300;
 }
 

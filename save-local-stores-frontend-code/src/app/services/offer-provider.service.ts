@@ -1,10 +1,11 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError } from 'rxjs';
-import { filter, map, catchError } from 'rxjs/operators';
+import { Observable, throwError, of } from 'rxjs';
+import { map, catchError, filter } from 'rxjs/operators';
 
 import { CITIES_SUBPATH, SHOPS_SUBPATH, PATH_SEPARATOR } from '../model/global';
 import { Offer } from '../model/offer';
+import { OFFERS } from '../model/mock-offers';
 import { environment } from 'src/environments/environment';
 
 function offerFromEntry(entry: Object): Offer {
@@ -18,7 +19,8 @@ function offerFromEntry(entry: Object): Offer {
     pictureURLs: [entry['picture']],
     streetAndNumber: entry['street'] + ' ' + entry['street_number'],
     zipCodeAndCity: entry['zip_code'] + ' ' + entry['telephone'],
-    quote: entry['quote']
+    quote: entry['quote'],
+    cityID: entry['city_id']
   }
 }
 
@@ -31,9 +33,24 @@ export class OfferProviderService {
   ) {
   }
 
+  mockOffers(cityID: string): Observable<Offer[]> {
+    return of(OFFERS).pipe(
+      map(offers => offers.filter(offer => offer.cityID == cityID))
+    )
+  }
+
+  mockOffer(offerID: string): Observable<Offer> {
+    return of(OFFERS).pipe(
+      map(offers => offers.find(offer => offer.id == offerID)),
+      filter(offer => offer != undefined)
+    )
+  }
+
   offers(cityID: string): Observable<Offer[]> {
     let queryURL = environment.backendIPSubpath + PATH_SEPARATOR + CITIES_SUBPATH + PATH_SEPARATOR + SHOPS_SUBPATH + PATH_SEPARATOR + cityID;
-    return this.http.get(queryURL).pipe(
+    return environment.useMocks ?
+      this.mockOffers(cityID) : 
+      this.http.get(queryURL).pipe(
       catchError(this.handleError),
       map(function (data: Object): Offer[] {
         let results = data['results']
@@ -48,7 +65,9 @@ export class OfferProviderService {
 
   offer(offerID: string): Observable<Offer> {
     let queryURL = environment.backendIPSubpath + PATH_SEPARATOR + SHOPS_SUBPATH + PATH_SEPARATOR + offerID;
-    return this.http.get(queryURL).pipe(
+    return environment.useMocks ?
+      this.mockOffer(offerID) : 
+      this.http.get(queryURL).pipe(
       catchError(this.handleError),
       map(function (data: Object): Offer {
         return offerFromEntry(data['results'][0])

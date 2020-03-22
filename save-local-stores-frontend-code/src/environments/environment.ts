@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  useMocks: true,
   backendIPSubpath: '78.47.161.61:8484'
 };
 

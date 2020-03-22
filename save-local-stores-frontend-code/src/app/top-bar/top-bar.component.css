@@ -19,6 +19,16 @@
   height: 64px;
 }
 
+#wirvsvirus {
+  position: absolute;
+  left: 162px;
+  top: 32px;
+}
+
+#wirvsvirus img {
+  height: 80px;
+}
+
 #logo {
   position: absolute;
   right: 40px;

@@ -18,7 +18,7 @@ function offerFromEntry(entry: Object): Offer {
     pictureURLs: [entry['picture']],
     streetAndNumber: entry['street'] + ' ' + entry['street_number'],
     zipCodeAndCity: entry['zip_code'] + ' ' + entry['telephone'],
-    quote: ''
+    quote: entry['quote']
   }
 }
 

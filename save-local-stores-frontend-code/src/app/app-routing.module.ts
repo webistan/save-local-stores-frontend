@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { AgbPageComponent } from './agb-page/agb-page.component';
+import { BusinessPageComponent } from './business-page/business-page.component';
 import { DataPrivacyPageComponent } from './data-privacy-page/data-privacy-page.component'
 import { DetailViewPageComponent } from './detail-view-page/detail-view-page.component'
 import { FaqPageComponent } from './faq-page/faq-page.component';
@@ -12,6 +14,7 @@ import { VoucherConfirmationPageComponent } from './voucher-confirmation-page/vo
 import { VoucherOrderPageComponent } from './voucher-order-page/voucher-order-page.component';
 
 const routes: Routes = [
+  { path: 'business', component: BusinessPageComponent },
   { path: '', component: LandingPageComponent },
   { path: 'confirmation', component: VoucherConfirmationPageComponent },
   { path: 'data-privacy', component: DataPrivacyPageComponent },

@@ -24,9 +24,3 @@
 #bottom-bar a:hover {
   color: #0ac693;
 }
-
-/* Add a green background color to the active link */
-#bottom-bar a.active {
-  background-color: #0ac693;
-  color: black;
-}

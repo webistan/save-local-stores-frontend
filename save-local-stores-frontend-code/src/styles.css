@@ -53,17 +53,17 @@ body {
 h1, h2 {font-weight: 700;}
 
 h1 {
-	font-size: 400%;
+	font-size: 500% !important;
 	line-height: 140px;
 }
 
 h2 {
-	font-size: 200%;
+	font-size: 300% !important;
 	line-height: 60px;
 }
 
 h3 {
-	font-size: 100%;
+	font-size: 150% !important;
 	line-height: 38px;
 	font-weight: 300;
 }

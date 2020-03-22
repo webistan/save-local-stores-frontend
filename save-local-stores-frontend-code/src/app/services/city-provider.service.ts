@@ -1,10 +1,11 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, throwError, of } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 
 import { City } from '../model/city';
-import { CITIES } from '../model/mock-cities';
+import { CITIES_SUBPATH, PATH_SEPARATOR } from '../model/global';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +17,7 @@ export class CityProviderService {
   }
 
   cities(): Observable<City[]> {
-    let configUrl = '78.47.161.61/cities';
+    let configUrl = environment.backendIPSubpath + PATH_SEPARATOR + CITIES_SUBPATH;
     return this.http.get(configUrl).pipe(
       catchError(this.handleError),
       map(function (data: Object): City[] {

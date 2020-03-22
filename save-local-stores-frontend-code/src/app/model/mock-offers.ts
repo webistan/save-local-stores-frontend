@@ -150,7 +150,7 @@ export const OFFERS: Offer[] = [
   businessCategory: 'Sonstiges',
   ownerName: 'Leon Lagowitz',
   description: 'Moin! Wer einen Hamburger Mitbringsel sucht, der ist bei uns richtig. Hier gibt es alles, was das Touristenherz begehrt und alle können ihren Liebsten eine Erinnerung an unsere schöne Hansestadt mitbringen. ',
-  quote: 'Souvenirs erinnern an schone Zeiten mit Familie und Freunden!',
+  quote: 'Souvenirs erinnern an schöne Zeiten mit Familie und Freunden!',
   pictureURLs: ['../../assets/shops/12.png'],
   ownerPictureURL: '../../assets/owners/12.png',
   streetAndNumber: 'Hafenweg 2',

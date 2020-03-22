@@ -118,7 +118,7 @@ a:hover {
   background-color : #fff;
   font-size        : 100%;
   font-weight      : 700;
-  color            : #00cb91;
+  color            : #00cb91 !important;
   letter-spacing   : 0.5px;
   letter-spacing   : 0.5px;
   text-decoration  : none;
@@ -128,7 +128,7 @@ a:hover {
 
 .buy-button:hover {
   background-color : #00cb91;
-  color            : #fff;
+  color            : #fff !important;
   transition       : 0.5s;
 }
 
